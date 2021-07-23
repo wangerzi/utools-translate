@@ -1,0 +1,4 @@
+/*fix color bugs*/
+.primary-text, .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label, .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    color: #ff6f00 !important;
+}

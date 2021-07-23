@@ -1,2 +1,11 @@
-# utools-translate
-An independent translate utools plugin.
+# utools 翻译插件
+一个独立的 utools 翻译插件
+
+## 需求
+
+- [ ] 【优先级高】基础界面设计
+- [ ] 【优先级中】自动识别 中文/英文 并做切换
+- [ ] 【优先级低】支持翻译更多的语言
+- [ ] 【优先级低】支持设置自己的 API KEY
+- [ ] 【优先级低】主题色调调试
+
