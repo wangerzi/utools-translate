@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "balm-ui": "^9.32.0",
+    "lodash": "^4.17.21",
     "vue": "^3.0.5"
   },
   "devDependencies": {
