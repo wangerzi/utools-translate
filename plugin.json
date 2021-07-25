@@ -3,13 +3,25 @@
   "logo": "./public/translate.png",
   "preload": "preload.js",
   "platform": ["win32", "darwin", "linux"],
-  "development": {
-    "main": "http://localhost:3000/"
-  },
-  "pluginSetting": {
-    "single": true,
-    "height": 500,
-    "features": {
+  "single": true,
+  "height": 500,
+  "features": [
+    {
+      "code": "main",
+      "explain": "打开翻译",
+      "cmds": ["翻译"]
+    },
+    {
+      "code": "english-match",
+      "explain": "匹配到英文",
+      "cmds": [
+        {
+          "type": "regex",
+          "label": "英文翻译",
+          "match": "/(\\w\\s)*/i",
+          "minLength": 1
+        }
+      ]
     }
-  }
+  ]
 }
