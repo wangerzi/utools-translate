@@ -1,0 +1,15 @@
+{
+  "main": "dist/index.html",
+  "logo": "./public/translate.png",
+  "preload": "preload.js",
+  "platform": ["win32", "darwin", "linux"],
+  "development": {
+    "main": "http://localhost:3000/"
+  },
+  "pluginSetting": {
+    "single": true,
+    "height": 500,
+    "features": {
+    }
+  }
+}

@@ -70,6 +70,7 @@ const state = reactive({
   }),
 })
 
+// todo:: debounce timeout setting and locking request for every provider
 watch(() => state.content, debounce((content, prevContent) => {
   updateTranslate(content)
 }, 500))
@@ -77,10 +78,12 @@ watch(() => state.content, debounce((content, prevContent) => {
 function updateTranslate(content) {
   const currTabKey = tabs[state.active].key
   if (content.length) {
-    // todo:: debounce timeout setting and locking request for every provider
     state.result[currTabKey] = 'loading...'
     setTimeout(() => {
-      state.result[currTabKey] = content + '在' + currTabKey + '中的翻译结果'
+      if (content === state.content) {
+        // avoid translate result doesn't match with origin content
+        state.result[currTabKey] = content + '在' + currTabKey + '中的翻译结果'
+      }
     }, 1000)
   } else {
     state.result[currTabKey] = ''
@@ -88,7 +91,6 @@ function updateTranslate(content) {
 }
 
 function handleTabChange(active) {
-  // todo:: hash check
   updateTranslate(state.content)
 }
 
