@@ -8,7 +8,7 @@
 <style scoped>
 .floating-setting {
   position: fixed;
-  right: 11%;
-  bottom: 60px;
+  right: 2%;
+  bottom: 40px;
 }
 </style>

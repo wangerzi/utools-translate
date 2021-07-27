@@ -5,13 +5,15 @@
         :class="{'language-selector': true, 'left-switching': true, 'switching': state.switching}"
         :options="LANGUAGES"
         outlined
+        mini
     >原始语言</ui-select>
-    <ui-fab icon="published_with_changes" class="" @click="handleChange"></ui-fab>
+    <ui-fab icon="published_with_changes" class="" @click="handleChange" mini></ui-fab>
     <ui-select
         v-model="state.to"
         :class="{'language-selector': true, 'right-switching': true, 'switching': state.switching}"
         :options="LANGUAGES"
         outlined
+        mini
     >目标语言</ui-select>
   </div>
 </template>
@@ -58,6 +60,15 @@ function handleChange() {
 }
 </script>
 
+<style>
+.switcher-container .mdc-select--outlined .mdc-select__anchor {
+  width: 120px;
+  height: 40px;
+}
+.switcher-container .mdc-select .mdc-floating-label {
+  top: 75%;
+}
+</style>
 <style scoped>
 .switcher-container {
   display: flex;

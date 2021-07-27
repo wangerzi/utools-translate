@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    <language-switcher></language-switcher>
-    <setting-button></setting-button>
     <ui-textfield
         v-model="state.content"
         input-type="textarea"
@@ -13,14 +11,20 @@
     >
       原文
     </ui-textfield>
-    <ui-tab-bar v-model="state.active" @update:modelValue="handleTabChange">
-      <ui-tab
-          v-for="(tab, index) in tabs"
-          :key="index"
-      >
-        {{ tab.title }}
-      </ui-tab>
-    </ui-tab-bar>
+    <div class="middle-toolbar">
+      <ui-tab-bar v-model="state.active" @update:modelValue="handleTabChange" class="translate-tabs">
+        <ui-tab
+            v-for="(tab, index) in tabs"
+            :key="index"
+        >
+          {{ tab.title }}
+        </ui-tab>
+      </ui-tab-bar>
+      <div class="operation">
+        <language-switcher></language-switcher>
+        <setting-button></setting-button>
+      </div>
+    </div>
     <ui-panels v-model="state.active">
       <ui-panel
           v-for="(tab, index) in tabs"
@@ -99,6 +103,12 @@ onMounted(() => {
 })
 </script>
 
+<!--<style>-->
+<!--.middle-toolbar .mdc-fab&#45;&#45;mini {-->
+<!--  width: 30px;-->
+<!--  height: 30px;-->
+<!--}-->
+<!--</style>-->
 <style scoped>
 .container {
   width: 80%;
@@ -110,5 +120,23 @@ onMounted(() => {
 
 .container > * {
   margin-top: 20px;
+}
+
+.middle-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.operation {
+  width: 50%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.translate-tabs {
+  max-width: 45%;
+  /*background-color: #fafafa;*/
 }
 </style>
