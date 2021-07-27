@@ -12,4 +12,4 @@
 ## 需解决的一些重要问题
 
 - [x] 打包后的 dist 是绝对路径引用，与 uTools 不兼容
-- [ ] 如何与 preload.js 结合
+- [x] 如何与 preload.js 结合
