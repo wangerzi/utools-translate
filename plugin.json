@@ -3,8 +3,10 @@
   "logo": "./public/translate.png",
   "preload": "preload.js",
   "platform": ["win32", "darwin", "linux"],
-  "single": true,
-  "height": 500,
+  "pluginSetting": {
+    "single": true,
+    "height": 500
+  },
   "features": [
     {
       "code": "main",
