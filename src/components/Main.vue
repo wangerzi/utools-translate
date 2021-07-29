@@ -111,7 +111,7 @@ onMounted(() => {
 <!--</style>-->
 <style scoped>
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 
   display: flex;
