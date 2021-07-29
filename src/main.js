@@ -40,7 +40,7 @@ app.use($theme, {
   "background": "#fff",
   "primary": "#ff6f00",
   "on-primary": "#000",
-  "secondary": "#ff9100",
+  "secondary": "#FFC020",
   "on-secondary": "#000",
   "surface": "#fff",
   "on-surface": "#000",

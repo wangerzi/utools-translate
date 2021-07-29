@@ -5,6 +5,9 @@
   "platform": ["win32", "darwin", "linux"],
   "single": true,
   "height": 500,
+  "development": {
+    "main": "http://127.0.0.1:3000/index.html"
+  },
   "features": [
     {
       "code": "main",

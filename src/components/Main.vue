@@ -101,7 +101,7 @@ onMounted(() => {
 
 <style scoped>
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 
   display: flex;
@@ -109,6 +109,6 @@ onMounted(() => {
 }
 
 .container > * {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 </style>
