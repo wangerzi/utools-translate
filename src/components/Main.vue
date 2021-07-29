@@ -119,7 +119,7 @@ onMounted(() => {
 }
 
 .container > * {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .middle-toolbar {

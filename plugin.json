@@ -7,6 +7,9 @@
     "single": true,
     "height": 450
   },
+  "development": {
+    "main": "http://127.0.0.1:3000/index.html"
+  },
   "features": [
     {
       "code": "main",
