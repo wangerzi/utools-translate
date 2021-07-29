@@ -3,10 +3,10 @@
     <ui-select
         v-model="state.from"
         :class="{'language-selector': true, 'left-switching': true, 'switching': state.switching}"
-        :options="LANGUAGES"
+        :options="SOURCE_LANGUAGES"
         outlined
         mini
-    >原始语言</ui-select>
+    ></ui-select>
     <ui-fab icon="published_with_changes" class="" @click="handleChange" mini></ui-fab>
     <ui-select
         v-model="state.to"
@@ -14,7 +14,7 @@
         :options="LANGUAGES"
         outlined
         mini
-    >目标语言</ui-select>
+    ></ui-select>
   </div>
 </template>
 
@@ -35,9 +35,13 @@ const LANGUAGES = [
     value: 'jp'
   }
 ];
+const SOURCE_LANGUAGES = [{
+  label: "自动",
+  value: 'auto'
+}].concat(LANGUAGES);
 
 const state = reactive({
-  from: 'cn',
+  from: 'auto',
   to: 'en',
   switching: false,
 });

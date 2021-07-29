@@ -47,8 +47,8 @@
 </template>
 
 <script setup>
-import {onMounted, reactive, watch} from 'vue'
-import {debounce} from 'lodash'
+import {computed, onMounted, reactive, watch, onUnmounted} from 'vue'
+import {debounce, throttle} from 'lodash'
 import SettingButton from './SettingButton.vue'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 import CopyButton from './CopyButton.vue'
@@ -100,8 +100,25 @@ function handleTabChange(active) {
   updateTranslate(state.content)
 }
 
+const resultContent = computed(() => {
+  const currTabKey = tabs[state.active].key
+  return state.result[currTabKey]
+})
+
+const listenerKeyboard = debounce((e) => {
+  if (e.key === 'c' && (window.utools.isMacOs() ? e.metaKey : e.ctrlKey)){
+    e.preventDefault();
+    console.log("copy", resultContent.value);
+    utools.copyText(resultContent.value);
+    utools.hideMainWindow();
+  }
+}, 200)
 onMounted(() => {
   // todo:: auto focus
+  document.addEventListener('keydown', listenerKeyboard);
+})
+onUnmounted(() => {
+  document.removeEventListener('keydown', listenerKeyboard)
 })
 </script>
 
@@ -114,14 +131,14 @@ onMounted(() => {
 <style scoped>
 .container {
   width: 90%;
-  margin: 0 auto;
+  margin: 10px auto;
 
   display: flex;
   flex-direction: column;
 }
 
 .container > * {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .middle-toolbar {
