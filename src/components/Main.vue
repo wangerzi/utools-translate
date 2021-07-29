@@ -32,7 +32,7 @@
             input-type="textarea"
             outlined
             fullwidth
-            rows="4"
+            rows="6"
             placeholder="译文"
         >
         </ui-textfield>
