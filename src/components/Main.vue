@@ -38,6 +38,7 @@
         </ui-textfield>
       </ui-panel>
     </ui-panels>
+    <copy-button></copy-button>
   </div>
 </template>
 
@@ -46,6 +47,7 @@ import {onMounted, reactive, watch} from 'vue'
 import {debounce} from 'lodash'
 import SettingButton from './SettingButton.vue'
 import LanguageSwitcher from './LanguageSwitcher.vue'
+import CopyButton from './CopyButton.vue'
 
 const tabs = [
   {
