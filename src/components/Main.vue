@@ -7,7 +7,7 @@
         fullwidth
         :maxlength="2000"
         with-counter
-        rows="4"
+        rows="6"
     >
       原文
     </ui-textfield>
@@ -36,7 +36,7 @@
             input-type="textarea"
             outlined
             fullwidth
-            rows="4"
+            rows="8"
             placeholder="译文"
         >
         </ui-textfield>
