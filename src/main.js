@@ -38,7 +38,7 @@ app.use(UiFab)
 
 app.use($theme, {
   "background": "#fff",
-  "primary": "#ff6f00",
+  "primary": "#ffa000",
   "on-primary": "#000",
   "secondary": "#FFC020",
   "on-secondary": "#000",
