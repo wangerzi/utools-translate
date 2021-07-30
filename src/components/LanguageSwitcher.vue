@@ -20,31 +20,15 @@
 
 <script setup>
 import {reactive} from 'vue'
+import {LANGUAGES, SOURCE_LANGUAGES} from "../const"
 
-const LANGUAGES = [
-  {
-    label: "中文",
-    value: 'cn'
-  },
-  {
-    label: "英语",
-    value: 'en'
-  },
-  {
-    label: "日语",
-    value: 'jp'
-  }
-];
-const SOURCE_LANGUAGES = [{
-  label: "自动",
-  value: 'auto'
-}].concat(LANGUAGES);
 
 const state = reactive({
   from: 'auto',
   to: 'en',
   switching: false,
 });
+
 
 function handleChange() {
   if (state.switching) {

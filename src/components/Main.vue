@@ -21,7 +21,7 @@
         </ui-tab>
       </ui-tab-bar>
       <div class="operation">
-        <language-switcher></language-switcher>
+        <language-switcher ref="switcher"></language-switcher>
         <setting-button></setting-button>
       </div>
     </div>
@@ -36,7 +36,7 @@
             input-type="textarea"
             outlined
             fullwidth
-            rows="8"
+            rows="6"
             placeholder="译文"
         >
         </ui-textfield>
